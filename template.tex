@@ -1,0 +1,59 @@
+\documentclass[UTF8, twocolumn]{ctexrep}
+
+\usepackage{geometry}
+\geometry{left=1.5em, right=1.5em, top=5em, bottom=5em}
+
+\usepackage{fontspec}
+\setmonofont{JetBrains Mono NL}
+\setCJKmainfont{LXGW WenKai}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black
+}
+
+\usepackage{listings}
+\lstset{
+    language   = C++,
+    frame      = t,
+    columns    = flexible,
+    tabsize    = 4,
+    aboveskip  = -0.1em,
+    belowskip  = -0.1em,
+    basicstyle = \linespread{0.95}\small\ttfamily,
+    breaklines = true,
+    showspaces = false,
+    showstringspaces = false
+}
+
+\usepackage{graphicx}
+
+\renewcommand{\title}{模板}
+\renewcommand{\author}{竫酲{\fontspec{JetBrains Mono NL}{OLENCER.}}}
+\newcommand{\version}{0.0.1}
+
+\begin{document}
+    \input{pages/titlepage}
+
+    \tableofcontents
+
+    \input{basic/basic}
+
+    \input{search/search}
+
+    \input{dynamic-programming/dynamic-programming}
+
+    \input{string/string}
+
+    \input{math/math}
+
+    \input{data-structure/data-structure}
+
+    \input{graph/graph}
+
+    \input{geometry/geometry}
+
+    \input{misc/misc}
+
+\end{document}
