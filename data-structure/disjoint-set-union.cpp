@@ -1,13 +1,14 @@
 const int N = 2E5;
 
-struct disjoint_set_union {
+struct disjoint_set_union
+{
     int parent[N + 1]{};
-    int size[N + 1]{};
+    int rank[N + 1]{};
 
     disjoint_set_union() {
         for (int i = 1; i <= N; ++i) {
             parent[i] = i;
-            size[i] = 1;
+            rank[i] = 1;
         }
     }
 
@@ -49,6 +50,6 @@ struct disjoint_set_union {
         y = find(y);
         if (x > y) { std::swap(x, y); }
         parent[x] = y;
-        size[y] += size[x];
+        rank[y] += rank[x];
     }
 };
