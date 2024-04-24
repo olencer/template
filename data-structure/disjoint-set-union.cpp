@@ -48,7 +48,9 @@ struct disjoint_set_union
     void merge(int x, int y) {
         x = find(x);
         y = find(y);
-        if (x > y) { std::swap(x, y); }
+        if(x == y) { return; }
+
+        if (rank[x] > rank[y]) { std::swap(x, y); }
         parent[x] = y;
         rank[y] += rank[x];
     }
