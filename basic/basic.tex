@@ -1,1 +1,20 @@
 \chapter{基础}\label{ch:basic}
+
+\section{二分法}\label{sec:binary}
+
+\subsection{STL二分查找}\label{subsec:binary-answer-stl}
+
+首个不小于给定值的元素的函数 \texttt{std::lower\_bound} 和查找首个大于给定值的元素的函数
+\texttt{std::upper\_bound}。
+
+\subsection{二分答案}\label{subsec:binary-answer}
+
+\lstinputlisting[caption={二分答案右边界}, label={lst:binary-answer-right},
+    firstline=1, lastline=11]{
+    basic/binary.cpp
+}
+
+\lstinputlisting[caption={二分答案左边界}, label={lst:binary-answer-left},
+    firstline=12, lastline=22]{
+    basic/binary.cpp
+}
