@@ -14,3 +14,11 @@ if(rear >= front) { int e = queue[rear]; }  // back
 if(rear >= front) { int e = queue[front]; } // front
 
 int length = rear - front + 1; // length
+
+// monotonic-queue
+for (int i = 1; i <= n; ++i) {
+    while (front <= rear && a[queue[rear]] >= a[i]) { --rear; }
+    while (front <= rear && i - queue[front] + 1 > k) { ++front; }
+    queue[++rear] = i;
+    if (i >= k) { std::cout << a[queue[front]] << " \n"[i == n]; }
+}
